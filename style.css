@@ -1,0 +1,19 @@
+body {
+	background-color: #a68ae3;
+}
+
+#grille {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;
+	width: min(50vw, 70vh);
+	height: min(50vw, 70vh);
+	top: calc(50vh - min(25vw, 35vh));
+	left: calc(50vw - min(25vw, 35vh));
+	background-color: white;
+}
+
+.case {
+	border: 2px solid black;
+}
