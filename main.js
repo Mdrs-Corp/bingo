@@ -2,22 +2,25 @@ const grilles = fetch('grilles.json').then(response => response.json()).then(jso
 const grids = JSON.parse(`
 {
     "maths exp": [
-        "Daria mange",
-        "Théo fait un bruit sus",
-        "Antoine est prié de se taire",
-        "'la pause monsieur ! la pause !!!'",
-        "blague de Florian",
-        "Thomas fait tout autre chose",
-        "précision signée Rayan",
-        "Plee 'n'a rien compris'",
-        "Olarribau vs l'ordi",
-        "démonstration super longue et sus",
-        "hilarité générale",
-        "'Nico ? Nico !!'",
-        "allusion de Larrib à la tablette",
-        "quelqu'un se lève sans raison",
-        "Olarribau fait ZUT!",
-        "de confusion, Olarribau efface 3 fois ou plus un résultat"
+    "Daria mange",
+    "Théo fait un bruit sus",
+    "Antoine est prié de se taire",
+    "'la pause monsieur ! la pause !!!'",
+    "blague de Florian",
+    "Thomas fait tout autre chose",
+    "précision signée Rayan",
+    "Plee \\\"n'a rien compris\\\"",
+    "Olarribau vs l'ordi",
+    "démonstration super longue et sus",
+    "hilarité générale",
+    "\\\"Nico ? Nico !!\\\"",
+    "allusion de Larrib à la tablette",
+    "quelqu'un se lève sans raison",
+    "Olarribau fait ZUT!",
+    "de confusion, Olarribau efface 3 fois ou plus un résultat"
+	"Quelqu'un arrive en retard",
+	"Olarribau soupire de désespoir",
+	"La pause dure anormalement longtemps"
     ]
 }`);
 
