@@ -35,9 +35,9 @@ body {
 	position: absolute;
 	top: calc(50vh + min(42vw, 42vh));
 	left: calc(50vw - 90px);
-	width: 180px;
-	height: 40px;
-	font-size: 15px;
+	width: min(20vw, 20vh);
+	height: min(5vw, 5vh);
+	font-size: min(2vw, 2vh);
 }
 
 #grids-list {
