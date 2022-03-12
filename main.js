@@ -18,8 +18,9 @@ const grids = JSON.parse(`
         "quelqu'un se lève sans raison",
         "Olarribau fait ZUT!",
         "de confusion Olarribau efface 3 fois ou plus un résultat",
-	"Pierre arrive en retard",
-	"Olarribau soupire de désespoir"
+	"Quelqu'un arrive en retard",
+	"Olarribau soupire de désespoir",
+	"La pause dure anormalement longtemps"
     ]
 }`);
 
