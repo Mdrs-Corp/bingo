@@ -40,7 +40,18 @@ body {
 	font-size: min(2vw, 2vh);
 }
 
-#grids-list {
-	position: absolute;
-	
+@media (aspect-ratio >= 1) {
+	#grids-list {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 20px;
+		top: 40vh;
+		background-color: white;
+		transition: width 2s;
+	}
+
+	#grids-list:hover {
+		width: 200px;
+	}
 }

@@ -1,25 +1,36 @@
-//const grilles = fetch('grilles.json').then(response => response.json()).then(json => console.log(json));
+const grilles = fetch('grilles.json').then(response => response.json()).then(json => console.log(json));
 const grids = JSON.parse(`
 {
     "maths exp": [
         "Daria mange",
         "Théo fait un bruit sus",
         "Antoine est prié de se taire",
-        "\\\"la pause monsieur ! la pause !!!\\\"",
+        "'la pause monsieur ! la pause !!!'",
         "blague de Florian",
         "Thomas fait tout autre chose",
         "précision signée Rayan",
-        "Plee \\\"n'a rien compris\\\"",
+        "Plee 'n'a rien compris'",
         "Olarribau vs l'ordi",
         "démonstration super longue et sus",
         "hilarité générale",
-        "\\\"Nico ? Nico !!\\\"",
+        "'Nico ? Nico !!'",
         "allusion de Larrib à la tablette",
         "quelqu'un se lève sans raison",
         "Olarribau fait ZUT!",
-        "de confusion Olarribau efface 3 fois ou plus un résultat"
+        "de confusion, Olarribau efface 3 fois ou plus un résultat"
     ]
 }`);
+
+const gridsListDisplay = document.querySelector('#grids-list');
+
+for (const name of Object.keys(grids)) {
+    const div = document.createElement('div');
+    div.className = 'grid-name';
+    const p = document.createElement('p');
+    p.textContent = name;
+    div.appendChild(p);
+    gridsListDisplay.appendChild(div);
+}
 
 const grid = document.querySelector('#grid');
 let selected = 'maths exp';
