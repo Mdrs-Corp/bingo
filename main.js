@@ -1,5 +1,5 @@
 //const grilles = fetch('grilles.json').then(response => response.json()).then(json => console.log(json));
-const grilles = JSON.parse(`
+const grids = JSON.parse(`
 {
     "maths exp": [
         "Daria mange",
@@ -21,59 +21,50 @@ const grilles = JSON.parse(`
     ]
 }`);
 
-const grille = document.querySelector('#grille');
+const grid = document.querySelector('#grid');
+let selected = 'maths exp';
 let aaaa = [false];
 
-/**
- * @param {number} n 
- * @param {string[]} data 
- */
 const gen = (n, data) => {
-	grille.innerHTML = '';
+	grid.innerHTML = '';
 	const c = [...data];
     aaaa = new Array(n*n).fill(false);
 
 	for (let i = 0; i < n*n; i++) {
 		const index = Math.floor(Math.random() * (data.length - i));
-		const texte = c[index];
+		const text = c[index];
 		c.splice(index, 1);
 		
 		const div = document.createElement('div');
-		div.className = 'case';
-        div.style.width = `calc(min(${70/n}vw, ${70/n}vh) - 4px)`;
-        div.style.height = `calc(min(${70/n}vw, ${70/n}vh) - 4px)`;
+		div.className = 'box';
+        div.style.width = `calc(${100/n}% - 4px)`;
+        div.style.height = `calc(${100/n}% - 4px)`;
 
         div.addEventListener('click', () => {
             aaaa[i] = !aaaa[i];
             div.style.backgroundColor = aaaa[i] ? '#edb928' : 'white';
-            verifieurdebingo(i%n, Math.floor(i/n), n);
+            check(i%n, Math.floor(i/n), n);
         })
 
 		const p = document.createElement('p');
-		p.textContent = texte;
+		p.textContent = text;
 		div.appendChild(p);
-		grille.appendChild(div);
+		grid.appendChild(div);
 	}
 }
 
-/**
- * @param {number} x 
- * @param {number} y 
- * @param {number} n 
- */
-const verifieurdebingo = (x, y, n) => {
-    let ligne = 0;
-    let colonne = 0;
+const check = (x, y, n) => {
+    let row = 0;
+    let column = 0;
 
     for (let i = 0; i < n; i++) {
-        ligne += aaaa[y*n + i];
-        colonne += aaaa[i*n + x];
+        row += aaaa[y*n + i];
+        column += aaaa[i*n + x];
     }
 
     let diag1 = 0;
     let diag2 = 0;
 
-    console.log(x, y)
     if (x === y || n-1-x === y) {
         for (let i = 0; i < n; i++) {
             diag1 += aaaa[i*n + i];
@@ -81,9 +72,9 @@ const verifieurdebingo = (x, y, n) => {
         }
     }
 
-    if (Math.max(ligne, colonne, diag1, diag2) === n)
+    if (Math.max(row, column, diag1, diag2) === n)
         console.log('bingo!');
 }
 
-document.querySelector('input').addEventListener('click', () => gen(3, grilles['maths exp']));
+document.querySelector('input').addEventListener('click', () => gen(4, grids[selected]));
 gen(1, ['mdrs'])

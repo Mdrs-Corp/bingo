@@ -2,21 +2,21 @@ body {
 	background-color: #a68ae3;
 }
 
-#grille {
+#grid {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	position: absolute;
-	width: min(70vw, 70vh);
-	height: min(70vw, 70vh);
-	top: calc(50vh - min(35vw, 35vh) - 4px);
-	left: calc(50vw - min(35vw, 35vh) - 4px);
+	width: min(80vw, 80vh);
+	height: min(80vw, 80vh);
+	top: calc(50vh - min(40vw, 40vh) - 4px);
+	left: calc(50vw - min(40vw, 40vh) - 4px);
 	background-color: white;
 	border-top: 4px solid black;
 	border-left: 4px solid black;
 }
 
-.case {
+.box {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,7 +24,7 @@ body {
 	border-right: 4px solid black;
 }
 
-.case > p {
+.box > p {
 	margin: 15px;
 	user-select: none;
 	text-align: center;
@@ -33,9 +33,14 @@ body {
 
 #gen {
 	position: absolute;
-	top: calc(50vh + min(40vw, 40vh));
+	top: calc(50vh + min(42vw, 42vh));
 	left: calc(50vw - 90px);
 	width: 180px;
 	height: 40px;
 	font-size: 15px;
+}
+
+#grids-list {
+	position: absolute;
+	
 }
