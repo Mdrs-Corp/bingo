@@ -8,7 +8,7 @@ const grids = JSON.parse(`
         "\\\"la pause monsieur ! la pause !!!\\\"",
         "blague de Florian",
         "Thomas fait tout autre chose",
-        "précision signée Rayan",
+        "précision signée Ryan",
         "Plee \\\"n'a rien compris\\\"",
         "Olarribau vs l'ordi",
         "démonstration super longue et sus",
@@ -17,7 +17,9 @@ const grids = JSON.parse(`
         "allusion de Larrib à la tablette",
         "quelqu'un se lève sans raison",
         "Olarribau fait ZUT!",
-        "de confusion Olarribau efface 3 fois ou plus un résultat"
+        "de confusion Olarribau efface 3 fois ou plus un résultat",
+	"Pierre arrive en retard",
+	"Olarribau soupire de désespoir"
     ]
 }`);
 
