@@ -25,5 +25,17 @@ body {
 }
 
 .case > p {
-	margin: 0;
+	margin: 15px;
+	user-select: none;
+	text-align: center;
+	font-size: min(3vw, 3vh);
+}
+
+#gen {
+	position: absolute;
+	top: calc(50vh + min(40vw, 40vh));
+	left: calc(50vw - 90px);
+	width: 180px;
+	height: 40px;
+	font-size: 15px;
 }
