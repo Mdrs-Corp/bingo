@@ -1,4 +1,5 @@
 const grids = fetch('grilles.json').then(response => response.json()).then(json => console.log(json));
+console.log(grids)
 
 //const grids = JSON.parse(`
 //{
